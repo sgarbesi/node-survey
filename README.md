@@ -68,7 +68,7 @@ The following are credentials are added by default and can be used to access the
 Starting the project:
 
 ```bash
-npm star;
+npm start;
 ```
 
 Testing up the project:
