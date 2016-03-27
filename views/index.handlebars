@@ -1,0 +1,45 @@
+<a class="color-white-hover color-yellow" href="./admin/" style="padding: 60px 60px 20px 20px; border-radius: 300px; background-color: #DD7072; position: fixed; right: -50px; top: -50px;">
+	<i class="fa fa-key font-18"></i>
+</a>
+
+<div class="container" id="survey">
+	{{> hero}}
+
+	<div class="row">
+		<div class="br-4 bg-white padding-30 col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+			<div class="hide loader"><div class="pull-down-50"></div></div>
+
+			<div id="survey">
+				<p class="alert alert-danger hide">
+					<i class="fa fa-warning push-right-10"></i>
+					<span></span>
+				</p>
+
+				<hr class="hide" />
+
+				<div id="thanks" class="{{#if data.questionAnswer}}hide {{/if}}text-center">
+					<div class="color-primary">
+						<i class="animated bounceIn color-green fa fa-check font-128"></i>
+					</div>
+
+					<h3>Thank you!</h3>
+					<p class="color-grey">Thanks for taking the time to answer the survey question.</p>
+					<p class="color-grey pull-up-5">Check back later for more questions.</p>
+				</div>
+
+				<form id="form" class="form form-default">
+					<strong>{{data.question.[questionValue]}}</strong>
+
+					{{#each data.questionAnswer}}
+						<div class="radio">
+							<label>
+								<input type="radio" name="{{this.questionId}}" value="{{this.questionAnswerId}}" />
+								{{this.questionAnswerValue}}
+							</label>
+						</div>
+					{{/each}}
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

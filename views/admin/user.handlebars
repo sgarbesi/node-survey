@@ -1,0 +1,33 @@
+{{> admin/header }}
+
+<div class="container">
+	{{> hero}}
+
+	<div class="row">
+		<div class="col-xs-12">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>User ID</th>
+						<th>Date Created</th>
+						<th>IP</th>
+						<th>User Agent</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					{{#each data.rows}}
+						<tr>
+							<td>{{this.userId}}</td>
+							<td>{{this.createdAt}}</td>
+							<td>{{this.userIp}}</td>
+							<td>{{this.userAgent}}</td>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+
+		{{> pagination this}}
+	</div>
+</div>

@@ -1,0 +1,38 @@
+{
+  "apps": [
+    {
+      "args": [
+        "--color"
+      ],
+      "ignore_watch": [
+        ".*",
+        "*.md",
+        "docs",
+        "node_modules",
+        "static"
+      ],
+      "instances": 1,
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "name": "node-survey",
+      "script": "app.js",
+      "watch_options": {
+        "atomic": true,
+        "usePolling": true,
+        "useFsEvents": true
+      }
+    }
+  ],
+  "express": {
+    "host": "localhost",
+    "port": 3000,
+    "secret": "CN#C#noenwofH#R@NOR3r2o32rnl"
+  },
+  "mysql": {
+    "database": "nodeSurvey",
+    "host": "localhost",
+    "password": "nodeSurvey",
+    "port": 3306,
+    "username": "nodeSurvey"
+  },
+  "sycned": false
+}

@@ -1,0 +1,11 @@
+<nav class="text-center">
+	<ul class="pagination">
+		{{#each pagination}}
+			{{#if this.[active]}}
+				<li class="active disabled"><a>{{this.page}}</a></li>
+			{{else}}
+				<li><a href="{{../url}}?page={{this}}">{{this}}</a></li>
+			{{/if}}
+		{{/each}}
+	</ul>
+</nav>

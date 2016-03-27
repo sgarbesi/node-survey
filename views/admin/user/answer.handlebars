@@ -1,0 +1,35 @@
+{{> admin/header }}
+
+<div class="container">
+	{{> hero}}
+
+	<div class="row">
+		<div class="col-xs-12">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>User ID</th>
+						<th>Question ID</th>
+						<th>Date Answered</th>
+						<th>Question</th>
+						<th>Answer</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					{{#each data.rows}}
+						<tr>
+							<td>{{this.userId}}</td>
+							<td>{{this.[questionAnswer.question.questionId]}}</td>
+							<td>{{this.createdAt}}</td>
+							<td>{{this.[questionAnswer.question.questionValue]}}</td>
+							<td>{{this.[questionAnswer.questionAnswerValue]}}</td>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+
+		{{> pagination this}}
+	</div>
+</div>

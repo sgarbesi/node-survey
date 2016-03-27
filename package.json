@@ -1,0 +1,43 @@
+{
+  "author": "sal@dolox.com",
+  "license": "MIT",
+  "name": "node-survey",
+  "version": "1.0.0",
+  "title": "Node Survey",
+  "description": "A basic Node.js survey example.",
+  "main": "app.js",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sgarbesi/node-survey.git"
+  },
+  "scripts": {
+    "dev": "pm2 start ./config/local.json --no-daemon --watch",
+    "postinstall": "node ./script/setup.js && node ./script/sync.js",
+    "setup": "node ./script/setup.js",
+    "start": "pm2 start ./config/local.json --no-daemon",
+    "sync": "node ./script/sync.js",
+    "test": "eslint ."
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
+    "eslint": "^2.5.1",
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "express-load": "^1.1.15",
+    "express-session": "^1.13.0",
+    "glob": "^7.0.3",
+    "lodash": "^3.10.1",
+    "method-override": "^2.3.5",
+    "morgan": "^1.7.0",
+    "mysql": "^2.10.2",
+    "pm2": "^1.0.2",
+    "prompt": "^1.0.0",
+    "sequelize": "^3.20.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

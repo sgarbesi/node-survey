@@ -1,0 +1,55 @@
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+			<a class="navbar-brand" href="./">{{title}}</a>
+		</div>
+
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="./admin/">Dashboard</a></li>
+				<li><a href="./admin/question/">Questions</a></li>
+				<li><a href="./admin/user/">Users</a></li>
+				<li><a href="./admin/user/answer/">User Answers</a></li>
+				<li><a data-target="#modalLogout" data-toggle="modal">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+<!-- Modal - Logout -->
+<div class="modal fade" id="modalLogout" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Logout</h4>
+			</div>
+
+			<div class="modal-body">
+				<div class="loader hide"><div class="pull-down-15"></div></div>
+
+				<p class="alert alert-danger hide">
+					<i class="fa fa-warning push-right-10"></i>
+					<span>{{error}}</span>
+				</p>
+
+				<form class="form form-horizontal" method="post">
+					Are you sure you want to logout of your account?
+				</form>
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button type="button" class="action btn btn-danger">Log me out!</button>
+			</div>
+		</div>
+	</div>
+</div>

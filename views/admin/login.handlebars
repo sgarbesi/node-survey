@@ -1,0 +1,42 @@
+<div class="container" id="adminLogin">
+	{{> hero}}
+
+	<div class="row">
+		<div class="br-4 bg-white padding-30 col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+			<div class="hide loader"><div class="pull-down-50"></div></div>
+
+			<div id="login">
+				<p class="alert alert-danger{{#if error}}{{else}} hide{{/if}}">
+					<i class="fa fa-warning push-right-10"></i>
+					<span>{{error}}</span>
+				</p>
+
+				<hr class="hide" />
+
+				<form class="form form-horizontal" method="post">
+					<div class="form-group">
+						<label for="username" class="col-sm-2 control-label">Username</label>
+
+						<div class="col-sm-10">
+							<input class="form-control" name="adminUsername" placeholder="Username" type="text" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+
+						<div class="col-sm-10">
+							<input class="form-control" name="adminPassword" placeholder="Password" type="password" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="submit" class="btn btn-default">Log in</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
