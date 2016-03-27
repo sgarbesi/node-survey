@@ -51,6 +51,7 @@ Once the server is running you should be able to access the following URLs.
 Note to adjust the domain and port accordingly if you changed the default settings.
 
 **Survey:** http://localhost:3000/
+
 **Admin:** http://localhost:3000/admin/
 
 The admin credentials are stored in the MySQL database under the `admin` table.
@@ -58,7 +59,8 @@ The admin `password` is simply stored in cleartext.
 
 The following are credentials are added by default and can be used to access the admin from the web:
 
-**Username** admin
+**Username:** admin
+
 **Password:** pass
 
 ---
