@@ -73,12 +73,6 @@ Starting the project:
 npm start;
 ```
 
-Testing up the project:
-
-```bash
-npm test;
-```
-
 Setting up the project:
 
 ```bash
@@ -95,4 +89,10 @@ Syncing the datastore:
 
 ```bash
 npm run sync;
+```
+
+Testing the project:
+
+```bash
+npm test;
 ```
