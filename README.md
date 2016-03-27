@@ -1,11 +1,12 @@
 # node-survey
 
-This is a basic survey Node.js survey example using the Express 4 framework.
+This is a basic Node.js survey example using the Express framework.
 
 ---
 
 ## Prerequisites
 
+- MySQL
 - Node.js >=0.10.0
 
 ---
@@ -55,9 +56,9 @@ Note to adjust the domain and port accordingly if you changed the default settin
 **Admin:** http://localhost:3000/admin/
 
 The admin credentials are stored in the MySQL database under the `admin` table.
-The admin `password` is simply stored in cleartext.
+The admin `password` is stored in cleartext.
 
-The following are credentials are added by default and can be used to access the admin from the web:
+The following credentials are added by default and can be used to access the admin through the web:
 
 **Username:** admin
 
