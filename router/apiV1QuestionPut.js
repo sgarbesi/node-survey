@@ -12,12 +12,9 @@ module.exports = function(app) {
 	'use strict';
 
 	app.service.express.put('/api/v1/question/', function(request, response) {
-		// If the client isn't an admin, then reject the request.
-		if (!_.get(request, 'session.admin.adminId')) {
-			return response.send({
-				error: 'You must be logged in to perfrom this action.',
-				success: false
-			});
+		// If the client isn't logged in, then reject the request.
+		if (app.controller.loginRequired(request, response) === false) {
+			return;
 		}
 
 		// Derive the `questionValue` from the request.

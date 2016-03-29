@@ -209,6 +209,15 @@ a:hover {
 	top: 0;
 }
 
+#login-key {
+	background-color: #DD7072;
+	border-radius: 300px;
+	padding: 60px 60px 20px 20px;
+	position: fixed;
+	right: -50px;
+	top: -50px;
+}
+
 @-webkit-keyframes loader {
 	0%,
 	80%,

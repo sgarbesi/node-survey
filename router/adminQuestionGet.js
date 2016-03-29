@@ -12,9 +12,9 @@ module.exports = function(app) {
 	'use strict';
 
 	app.service.express.get('/admin/question/', function(request, response) {
-		// If the client isn't an admin, then reject the request.
-		if (!_.get(request, 'session.admin.adminId')) {
-			return response.redirect(302, '/admin/?loginRequired=1');
+		// If the client isn't logged in, then reject the request.
+		if (app.controller.loginRequired(request, response, true) === false) {
+			return;
 		}
 
 		// Define the options for the query.
